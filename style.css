@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    border:0;
+    padding:0;
+}
+
+.header-img{
+    background-color: #5da5a4;
+    width: 100%
+}
+
+body{
+    background-color: hsl(180,52%,96%);
+    font-family: "League Spartan";
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.job-description, .company, .new, .featured, .title, .details-list, 
+.day-posted, .dot, .type, .location, .skills-list, .skill, .filter-bar, .filter-bar-clear{
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    margin: 5% 10%;
+}
+
+.job-offer{
+    display: flex;
+    background-color: white;
+    box-shadow: 2px 2px 6px hsla(180, 32%, 53%, 0.4);
+    padding: 2rem;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.logo-job-description{
+    display: flex;
+    width: 50%;
+    gap: 1.5rem;
+}
+
+.job-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.company-new-featured{
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+}
+
+.company{
+    color: hsl(180,29%,50%);
+    font-weight: 700;
+}
+
+.new{
+    color:white;
+    background-color:hsl(180,29%,50%);
+    padding: 0.5rem;
+    border-radius: 20px;
+}
+
+.featured{
+    color:white;
+    background-color:hsl(180, 14%, 20%);
+    padding: 0.5rem;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.title{
+    font-weight: 700;
+    color: hsl(180, 14%, 20%);
+}
+
+.title:hover{
+    color: hsl(180,29%,50%);
+    cursor: pointer;
+}
+
+.details-list{
+    color: hsl(180, 8%, 52%);
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.skills-list{
+    display: flex;
+    gap:0.5rem;
+    color: hsl(180,29%,50%);
+    font-weight: 700;
+    width: 50%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.skill{
+    height:fit-content;
+    padding: 0.35rem;
+    background-color:hsl(180, 31%, 95%);
+    border-radius:3px;
+}
+
+.skill:hover{
+    background-color: hsl(180,29%,50%);
+    color:white;
+    cursor: pointer;
+}
+
+.featured-job{
+    border-left: solid hsl(180,29%,50%) 0.25rem;
+}
+
+.filter-bar{
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 4px;
+    padding: 0.5rem 2rem;
+    margin: 0% 10%;
+    transform: translateY(-50%);
+    display: none;
+    justify-content: space-between;
+}
+
+.filter-bar-skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-bar-skill{
+    background-color:hsl(180, 31%, 95%);
+    border-radius:3px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-bar-skill-text{
+
+    color: hsl(180,29%,50%);
+    font-weight: 700;
+    margin: auto;
+    padding:0.5rem;
+}
+
+.filter-bar-skill-x{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color:hsl(180,29%,50%);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;    
+    padding:0.5rem;
+}
+
+.filter-bar-skill-x:hover{
+    background-color:hsl(180, 14%, 20%);
+    cursor: pointer;
+}
+
+.filter-bar-clear{
+    all: unset;
+    display: block; 
+    cursor: pointer;
+    font-weight: 700;
+    color: hsl(180, 8%, 52%);
+}
+
+.filter-bar-clear:hover{
+    color: hsl(180,29%,50%);
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 376px) {
+    .list{
+        gap:2.5rem;
+    }
+    .logo{
+        width:48px;
+        height:48px;
+        position:absolute;
+        top:0;
+        transform: translateY(-50%);
+    }
+    .job-offer{
+        position: relative;
+        flex-direction: column; 
+    }
+    .logo-job-description{
+        padding-bottom:1rem;
+        border-bottom: solid lightgrey 1px;
+        width:100%;
+        flex-direction: column;
+    }
+    .job-description{
+        gap:1rem;
+    }
+    .details-list{
+        justify-content: flex-start;
+        gap:0.5rem;
+    }
+    .skills-list{
+        padding-top: 1rem;
+        width:100%;
+        justify-content: flex-start;
+        gap:1rem;
+    }
+    .filter-bar{
+        transform: translateY(-70%);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .filter-bar{
+        transform: translateY(-15%);
+    }
+}
+

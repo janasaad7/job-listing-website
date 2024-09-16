@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Job Listings</title>
+        <link rel="icon" href="images\favicon-32x32.png">
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">    
+    </head>
+    <script type="module" src="main.js" defer></script>
+    <body>
+        <header>
+            
+            <img class="header-img" src="images\bg-header-desktop.svg" alt="header">
+            <div class="filter-bar">
+                <div class="filter-bar-skills"></div>
+                <button class="filter-bar-clear">Clear</button>
+            </div>
+        </header>
+        
+        <div class="list">
+            <template class="job-template">
+                <section class="job-offer">
+                    <div class="logo-job-description">
+                        <img class="logo" src="" alt="Company Logo">
+                        <div class="job-description">
+                            <div class="company-new-featured">
+                                <div class="company"></div>
+                            </div>
+                            <div class="title"></div>
+                            <div class="details-list">
+                                <div class="day-posted"></div>
+                                <div class="dot">·</div>
+                                <div class="type"></div>
+                                <div class="dot">·</div>
+                                <div class="location"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-list"></div>
+                </section>
+            </template>
+        </div>
+    </body>
+</html>
